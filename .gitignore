@@ -1,0 +1,9 @@
+.gradle/
+build/
+.idea/
+*.iml
+.intellijPlatform/
+
+# 插件签名私钥（切勿提交）
+private.pem
+private_encrypted.pem

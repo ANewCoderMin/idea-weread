@@ -1,0 +1,60 @@
+<idea-plugin>
+    <id>com.weread.idea</id>
+    <name>IDEA Weread</name>
+    <icon>/icons/pluginIcon.svg</icon>
+    <vendor>weread.idea</vendor>
+
+    <description><![CDATA[
+        <h1>IDEA Weread</h1>
+        <p>在 IntelliJ IDEA 内嵌微信读书网页版，把「写代码 → 看书 → 继续写代码」的切换成本降到最低。</p>
+        <ul>
+            <li>右侧工具窗口固定微信读书（官方网页版）</li>
+            <li>Alt / Option + W 快捷开关</li>
+            <li>后退 / 前进 / 刷新 / 首页导航</li>
+            <li>页面缩放（Ctrl / Cmd + +/-/0）</li>
+            <li>阅读模式</li>
+        </ul>
+        <p>登录、书架、阅读进度全部由微信读书官方页面负责，插件不存储任何账号信息。</p>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.jcef</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="Weread"
+                    anchor="right"
+                    icon="/icons/pluginIcon.svg"
+                    factoryClass="com.weread.idea.WereadToolWindowFactory"/>
+    </extensions>
+
+    <actions>
+        <action id="Weread.Toggle"
+                class="com.weread.idea.WereadToggleAction"
+                text="微信读书"
+                description="显示或隐藏微信读书工具窗口">
+            <keyboard-shortcut keymap="$default" first-keystroke="alt W"/>
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+
+        <action id="Weread.ZoomIn"
+                class="com.weread.idea.WereadZoomInAction"
+                text="微信读书：放大"
+                description="放大微信读书页面">
+            <keyboard-shortcut keymap="$default" first-keystroke="meta EQUALS"/>
+        </action>
+
+        <action id="Weread.ZoomOut"
+                class="com.weread.idea.WereadZoomOutAction"
+                text="微信读书：缩小"
+                description="缩小微信读书页面">
+            <keyboard-shortcut keymap="$default" first-keystroke="meta MINUS"/>
+        </action>
+
+        <action id="Weread.ZoomReset"
+                class="com.weread.idea.WereadZoomResetAction"
+                text="微信读书：恢复缩放"
+                description="恢复微信读书页面缩放至 100%">
+            <keyboard-shortcut keymap="$default" first-keystroke="meta 0"/>
+        </action>
+    </actions>
+</idea-plugin>
