@@ -1,0 +1,14 @@
+IU-262.8665.258 / Plugin Verifier 1.411 / isolated cache / offline
+
+=== Compiled public-source audit package; descriptor normalized ===
+--- verification-verdict.txt ---
+Compatible
+
+No deprecated, experimental, internal, compatibility-problem or compatibility-warning report produced.
+
+=== Published 0.2.5 control; factory.class replaced only ===
+--- verification-verdict.txt ---
+Compatible
+
+No deprecated, experimental, internal, compatibility-problem or compatibility-warning report produced.
+
