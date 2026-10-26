@@ -1,0 +1,61 @@
+Compiled from "WereadToolWindowFactory.kt"
+public final class com.weread.idea.WereadToolWindowFactory implements com.intellij.openapi.wm.ToolWindowFactory {
+  public com.weread.idea.WereadToolWindowFactory();
+    Code:
+       0: aload_0
+       1: invokespecial #10                 // Method java/lang/Object."<init>":()V
+       4: return
+    LineNumberTable:
+      line 13: 0
+    LocalVariableTable:
+      Start  Length  Slot  Name   Signature
+          0       5     0  this   Lcom/weread/idea/WereadToolWindowFactory;
+
+  public void createToolWindowContent(com.intellij.openapi.project.Project, com.intellij.openapi.wm.ToolWindow);
+    Code:
+       0: aload_1
+       1: ldc           #17                 // String project
+       3: invokestatic  #23                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       6: aload_2
+       7: ldc           #25                 // String toolWindow
+       9: invokestatic  #23                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+      12: new           #27                 // class com/weread/idea/WereadBrowserPanel
+      15: dup
+      16: aload_1
+      17: invokespecial #30                 // Method com/weread/idea/WereadBrowserPanel."<init>":(Lcom/intellij/openapi/project/Project;)V
+      20: astore_3
+      21: invokestatic  #36                 // InterfaceMethod com/intellij/ui/content/ContentFactory.getInstance:()Lcom/intellij/ui/content/ContentFactory;
+      24: aload_3
+      25: checkcast     #38                 // class javax/swing/JComponent
+      28: ldc           #40                 // String
+      30: iconst_0
+      31: invokeinterface #44,  4           // InterfaceMethod com/intellij/ui/content/ContentFactory.createContent:(Ljavax/swing/JComponent;Ljava/lang/String;Z)Lcom/intellij/ui/content/Content;
+      36: dup
+      37: ldc           #46                 // String createContent(...)
+      39: invokestatic  #49                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+      42: astore        4
+      44: aload_2
+      45: invokeinterface #55,  1           // InterfaceMethod com/intellij/openapi/wm/ToolWindow.getContentManager:()Lcom/intellij/ui/content/ContentManager;
+      50: aload         4
+      52: invokeinterface #61,  2           // InterfaceMethod com/intellij/ui/content/ContentManager.addContent:(Lcom/intellij/ui/content/Content;)V
+      57: aload_2
+      58: new           #63                 // class com/weread/idea/WereadCodeLayoutAction
+      61: dup
+      62: invokespecial #64                 // Method com/weread/idea/WereadCodeLayoutAction."<init>":()V
+      65: invokestatic  #70                 // Method kotlin/collections/CollectionsKt.listOf:(Ljava/lang/Object;)Ljava/util/List;
+      68: invokeinterface #74,  2           // InterfaceMethod com/intellij/openapi/wm/ToolWindow.setTitleActions:(Ljava/util/List;)V
+      73: return
+    LineNumberTable:
+      line 17: 12
+      line 18: 21
+      line 19: 44
+      line 20: 57
+      line 21: 73
+    LocalVariableTable:
+      Start  Length  Slot  Name   Signature
+         21      53     3 panel   Lcom/weread/idea/WereadBrowserPanel;
+         44      30     4 content   Lcom/intellij/ui/content/Content;
+          0      74     0  this   Lcom/weread/idea/WereadToolWindowFactory;
+          0      74     1 project   Lcom/intellij/openapi/project/Project;
+          0      74     2 toolWindow   Lcom/intellij/openapi/wm/ToolWindow;
+}

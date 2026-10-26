@@ -1,0 +1,19 @@
+Published 0.2.5 / IU-263.6800.24 / Plugin Verifier 1.411
+
+--- verification-verdict.txt ---
+Compatible. 4 usages of deprecated API. 6 usages of experimental API
+
+--- deprecated-usages.txt ---
+Deprecated method com.intellij.openapi.wm.ToolWindowFactory.isDoNotActivateOnStart() : boolean is overridden in class com.weread.idea.WereadToolWindowFactory
+Deprecated method com.intellij.openapi.wm.ToolWindowFactory.isDoNotActivateOnStart() : boolean is invoked in com.weread.idea.WereadToolWindowFactory.isDoNotActivateOnStart() : boolean
+Deprecated method com.intellij.openapi.wm.ToolWindowFactory.isApplicable(com.intellij.openapi.project.Project project) : boolean is overridden in class com.weread.idea.WereadToolWindowFactory
+Deprecated method com.intellij.openapi.wm.ToolWindowFactory.isApplicable(com.intellij.openapi.project.Project project) : boolean is invoked in com.weread.idea.WereadToolWindowFactory.isApplicable(Project) : boolean
+
+--- experimental-api-usages.txt ---
+Experimental API method com.intellij.openapi.wm.ToolWindowFactory.getAnchor() : com.intellij.openapi.wm.ToolWindowAnchor is invoked in com.weread.idea.WereadToolWindowFactory.getAnchor() : ToolWindowAnchor. This method can be changed in a future release leading to incompatibilities
+Experimental API method com.intellij.openapi.wm.ToolWindowFactory.manage(com.intellij.openapi.wm.ToolWindow toolWindow, com.intellij.openapi.wm.ToolWindowManager toolWindowManager, kotlin.coroutines.Continuation $completion) : java.lang.Object is overridden in class com.weread.idea.WereadToolWindowFactory. This method can be changed in a future release leading to incompatibilities
+Experimental API method com.intellij.openapi.wm.ToolWindowFactory.manage(com.intellij.openapi.wm.ToolWindow toolWindow, com.intellij.openapi.wm.ToolWindowManager toolWindowManager, kotlin.coroutines.Continuation $completion) : java.lang.Object is invoked in com.weread.idea.WereadToolWindowFactory.manage(ToolWindow, ToolWindowManager, Continuation) : Object. This method can be changed in a future release leading to incompatibilities
+Experimental API method com.intellij.openapi.wm.ToolWindowFactory.getIcon() : javax.swing.Icon is overridden in class com.weread.idea.WereadToolWindowFactory. This method can be changed in a future release leading to incompatibilities
+Experimental API method com.intellij.openapi.wm.ToolWindowFactory.getAnchor() : com.intellij.openapi.wm.ToolWindowAnchor is overridden in class com.weread.idea.WereadToolWindowFactory. This method can be changed in a future release leading to incompatibilities
+Experimental API method com.intellij.openapi.wm.ToolWindowFactory.getIcon() : javax.swing.Icon is invoked in com.weread.idea.WereadToolWindowFactory.getIcon() : Icon. This method can be changed in a future release leading to incompatibilities
+

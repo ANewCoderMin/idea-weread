@@ -1,0 +1,6 @@
+Plugin com.weread.idea:0.2.5 against IU-262.8665.258: Compatible
+Plugin com.weread.idea:0.1.0-audit against IU-262.8665.258: Compatible
+Plugin com.weread.idea:0.1.0-audit against IU-263.7031.23: Compatible
+Plugin com.weread.idea:0.2.5 against IU-263.7031.23: Compatible
+Plugin com.weread.idea:0.1.0-audit against IU-263.6800.24: Compatible
+Plugin com.weread.idea:0.2.5 against IU-263.6800.24: Compatible
